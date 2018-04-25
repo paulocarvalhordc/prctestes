@@ -1,0 +1,14 @@
+import ldap
+ 
+# Aqui defino as variaveis para a conexao
+ 
+address = "ldap_test.exemplo.com.br"
+user = "cn=rootadmin,dc=password,dc=com,dc=br"
+password = "testepasswd"
+base = "dc=exemplo,dc=com,dc=br"
+ 
+# Neste ponto efetuao a conexao com o Ldap
+ 
+connection = ldap.initialize("ldap://%s"%address)
+connection.protocol_version = ldap.VERSION3
+connection.bind(user,password)
