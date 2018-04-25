@@ -1,0 +1,24 @@
+import webbrowser
+
+webbrowser.open('www.gmail.comew=0, autoraise=True)
+
+url = 'http://gmail.com.br'
+email = 'teste@gmail.com'
+senha = 'password'
+
+br.addheaders = [('User-agent', 'Mozilla/5.0 (X11;\
+ U; Linux i686; en-US; rv:1.9.0.1) Gecko/2008071615\ Firefox/3.0.1')]
+
+br.open(url)
+br.select_form(nr=0)
+
+for f in br.forms():
+   print f
+
+br.form['email'] = email
+br.form['password'] = senha
+
+def f(p):
+    return p.startswith('DevOps') or p.startswith('devops')
+
+print filter(f, palavras)
